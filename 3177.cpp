@@ -1,3 +1,8 @@
+//需做整体考虑，胜了记三分，平了记两分
+//设非平为x，平为y
+//则 3x+y=sum  x+y=t
+//解方程得y
+
 #include<iostream>
 #include<string>
 using namespace std;
