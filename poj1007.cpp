@@ -45,3 +45,67 @@ int main()
 
     return 0;
 }
+// the new and fast way
+#include<iostream>
+#include<algorithm>
+#include<string>
+#include<cstdio>
+
+using namespace std;
+
+struct DNA
+{
+    char s[100];
+    int num;
+}w[100];
+
+bool cmp(DNA a,DNA b)
+{
+    return a.num<b.num;
+}
+
+int count_inver(char *str,int len)
+{
+    int i;
+    int cnt=0;
+    int a[4]={0};
+    for(i=len-1;i>=0;i--)
+    {
+        switch(str[i])
+        {
+        case 'A':
+                a[1]++;
+                a[2]++;
+                a[3]++;
+                break;
+        case 'C':
+                a[2]++;
+                a[3]++;
+                cnt+=a[1];
+                break;
+        case 'G':
+                a[3]++;
+                cnt+=a[2];
+                break;
+        case 'T':
+                cnt+=a[3];
+        }
+    }
+    return cnt;
+}
+int main()
+{
+    int m,n,i,j;
+    cin>>m>>n;
+    for(i=0;i<n;i++)
+    {
+        cin>>w[i].s;
+        w[i].num=count_inver(w[i].s,m);
+    }
+    stable_sort(w,w+m,cmp);
+
+    for(j=0;j<n;j++)
+    {
+        cout<<w[i].s<<endl;
+    }
+}
