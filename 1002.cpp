@@ -90,3 +90,14 @@ int main(void)
 	}
 	return 0;
 }
+
+
+
+
+//About this problem, it is difficult for me. 
+//In order to solve it, i find the ideas in the internet. And then i will mine understanding.
+//At first, wo should transform the character string to number,
+//And then, we can use the sort function from STL Labrary and two string named visit and time with int type
+//to count which number repeat and frequency
+//We choose the appear number times add in the sort_out string
+//End. use qulickly sort to cout this number and the times.
