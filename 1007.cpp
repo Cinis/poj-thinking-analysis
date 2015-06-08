@@ -109,3 +109,9 @@ int main()
         cout<<w[i].s<<endl;
     }
 }
+
+
+
+//This problem is about inverted Sequence Number
+//Obviously we should get the inversion Number at first
+//and then sort it.(use qsort() function)
