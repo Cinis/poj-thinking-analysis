@@ -3,6 +3,12 @@
 //则 3x+y=sum  x+y=t
 //解方程得y
 
+//The idea is win get three mark and if tie wo scoreing two
+//so we hypothesize tie is y,and not is x
+// 3x+y=sum
+//x+y=t
+//solve it
+
 #include<iostream>
 #include<string>
 using namespace std;
